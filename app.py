@@ -21,6 +21,11 @@ app = Flask(__name__)
 CORS(app)
 
 
+@app.route("/")
+def home():
+    return jsonify({"message": "SafeDose backend running 🚀"})
+
+
 @app.route("/health", methods=["GET"])
 def health():
     """Returns the health status and version of the API."""
