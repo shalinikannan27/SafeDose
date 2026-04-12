@@ -480,8 +480,8 @@ export default function CheckVaccinePage() {
                             max="1"
                             step="0.001"
                             placeholder="e.g. 0.05"
-                            value={formData.frac_temp_above_8 || ""}
-                            onChange={(e) => handleInputChange("frac_temp_above_8", parseFloat(e.target.value) || 0)}
+                            value={formData.frac_temp_above_8 ?? ""}
+                            onChange={(e) => handleInputChange("frac_temp_above_8", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -493,8 +493,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="0.1"
                             placeholder="e.g. 1.2"
-                            value={formData.handling_stress || ""}
-                            onChange={(e) => handleInputChange("handling_stress", parseFloat(e.target.value) || 0)}
+                            value={formData.handling_stress ?? ""}
+                            onChange={(e) => handleInputChange("handling_stress", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -506,8 +506,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="0.01"
                             placeholder="e.g. 5.1"
-                            value={formData.hum_std || ""}
-                            onChange={(e) => handleInputChange("hum_std", parseFloat(e.target.value) || 0)}
+                            value={formData.hum_std ?? ""}
+                            onChange={(e) => handleInputChange("hum_std", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -519,8 +519,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="1"
                             placeholder="e.g. 4"
-                            value={formData.door_count || ""}
-                            onChange={(e) => handleInputChange("door_count", parseInt(e.target.value) || 0)}
+                            value={formData.door_count ?? ""}
+                            onChange={(e) => handleInputChange("door_count", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -532,8 +532,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="0.1"
                             placeholder="e.g. 9.2"
-                            value={formData.temp_max || ""}
-                            onChange={(e) => handleInputChange("temp_max", parseFloat(e.target.value) || 0)}
+                            value={formData.temp_max ?? ""}
+                            onChange={(e) => handleInputChange("temp_max", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -545,8 +545,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="0.1"
                             placeholder="e.g. 62.4"
-                            value={formData.hum_mean || ""}
-                            onChange={(e) => handleInputChange("hum_mean", parseFloat(e.target.value) || 0)}
+                            value={formData.hum_mean ?? ""}
+                            onChange={(e) => handleInputChange("hum_mean", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -558,8 +558,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="1"
                             placeholder="e.g. 800"
-                            value={formData.light_mean_abs || ""}
-                            onChange={(e) => handleInputChange("light_mean_abs", parseFloat(e.target.value) || 0)}
+                            value={formData.light_mean_abs ?? ""}
+                            onChange={(e) => handleInputChange("light_mean_abs", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
@@ -571,8 +571,8 @@ export default function CheckVaccinePage() {
                             type="number"
                             step="0.01"
                             placeholder="e.g. 1.2"
-                            value={formData.accel_rms || ""}
-                            onChange={(e) => handleInputChange("accel_rms", parseFloat(e.target.value) || 0)}
+                            value={formData.accel_rms ?? ""}
+                            onChange={(e) => handleInputChange("accel_rms", e.target.value)}
                             className="h-8 text-xs"
                           />
                         </div>
