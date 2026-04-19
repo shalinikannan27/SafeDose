@@ -34,6 +34,10 @@ import { useDropzone } from "react-dropzone"
 import { cn } from "@/lib/utils"
 import Papa from "papaparse"
 
+const API_BASE = (
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"
+).replace(/\/$/, "")
+
 interface ManualFormData {
   frac_temp_above_8: number
   handling_stress: number
@@ -121,7 +125,7 @@ export default function CheckVaccinePage() {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const response = await fetch("http://localhost:5000/health")
+        const response = await fetch(`${API_BASE}/health`)
         if (!response.ok) throw new Error("Backend not ok")
         setIsBackendDown(false)
       } catch (err) {
@@ -188,7 +192,7 @@ export default function CheckVaccinePage() {
     setCurrentStep(2)
 
     try {
-      const response = await fetch("http://localhost:5000/predict-csv", {
+      const response = await fetch(`${API_BASE}/predict-csv`, {
         method: "POST",
         body: uploadFormData,
       })
@@ -239,7 +243,7 @@ export default function CheckVaccinePage() {
     setCurrentStep(2)
 
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch(`${API_BASE}/predict`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
